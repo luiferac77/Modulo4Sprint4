@@ -12,11 +12,11 @@ const PersonajesCard = () => {
     if (!personajes || personajes.length === 0) return <div className='flex container text-gray-300'>No se encontraron personajes</div>;
 
     return (
-        <div className="overflow-auto container mx-auto bg-gray-800" style={{ height: '600px', maxHeight: '600px' }}> {/* Contenedor con scroll */}
+        <div className="overflow-auto container mx-auto bg-gray-800/80" style={{ height: '600px', maxHeight: '600px' }}> {/* Contenedor con scroll */}
             <div className="grid grid-cols-1 gap-4 mt-4 transition duration-1000">
                 {personajes.map((personaje) => (
-                    <div className='relative p-4 ' key={personaje.id}>
-                        <div className="flex border p-4 rounded-md shadow-md items-center">
+                    <div className='relative p-4' key={personaje.id}>
+                        <div className="flex border p-4 rounded-md shadow-md items-center bg-gray-700/80 text-gray-300">
                         <img 
                             src={personaje.image} 
                             alt={personaje.name} 
@@ -30,7 +30,7 @@ const PersonajesCard = () => {
                         </div>
                         <button 
                             onClick={() => agregarAFavoritos(personaje)}
-                            className='absolute w-10 h-10 rounded-full bottom-6 right-6 flex items-center justify-center p-2 cursor-pointer transition shadow-lg text-white bg-gray-400 hover:text-red-600'
+                            className='absolute w-10 h-10 rounded-full bottom-8 right-8 flex items-center justify-center p-2 cursor-pointer transition shadow-lg text-white bg-gray-400 hover:text-red-600'
                         >
                         <Heart size={32} weight="fill" />
                         </button>
