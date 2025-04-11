@@ -15,7 +15,7 @@ const Header = () => {
         <header className='flex items-center justify-center w-full p-6 bg-gray-900 text-white'>
             <div className='flex container mx-auto justify-between items-center'>
                 <h1 className='flex text-xl font-bold items-center'>
-                <span className='text-yellow-400'>&nbsp;Rick And Morthy</span>
+                <span className='text-green-500 font-semibold text-4xl'>&nbsp;Rick And Morty</span>
                 </h1>
                 <div className='flex items-center space-x-4'>
                     {/* Botón para el carrito */}
