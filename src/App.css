@@ -1,4 +1,5 @@
 @import "tailwindcss";
 body{
     background-color: oklch(0.278 0.033 256.848);
+    font-family: 'Unkempt', cursive;
 }
