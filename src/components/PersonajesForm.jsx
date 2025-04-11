@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 import { toast } from 'react-toastify';
 import { usePersonajeContext } from "../context/PersonajeContext";
 
@@ -20,24 +20,27 @@ const PersonajesForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="mb-4">
-            <input
-                type="text"
-                value={nombre}
-                onChange={(e) => setNombre(e.target.value)}
-                placeholder="Buscar personaje"
-                className="border p-2"
-            />
-            <button
-                type="submit"
-                className={`bg-blue-500 text-white p-2 ml-2 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                disabled={loading}
-            >
-                {loading ? 'Buscando...' : 'Buscar'}
-            </button>
-            
-            
-        </form>
+        <>
+            <div className="flex container w-full mx-auto mt-10 mb-4 justify-center">
+                <form onSubmit={handleSubmit} className="flex border rounded-2xl border-gray-500 p-1 bg-gray-600 w-2xl">
+                    <input
+                        type="text"
+                        value={nombre}
+                        onChange={(e) => setNombre(e.target.value)}
+                        placeholder="Buscar personaje"
+                        className="px-2 py-2.5 border-none focus: outline-none bg-gray-600 text-gray-100 font-semibold w-full"
+                    />
+                    <button
+                        type="submit"
+                        className={`bg-gray-700 text-gray-100 font-semibold px-4 py-2 cursor-pointer hover:bg-gray-700/50 ml-2 rounded-2xl ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        disabled={loading}
+                    >
+                        {loading ? 'Buscando...' : 'Buscar'}
+                    </button>
+                </form>
+            </div>
+        </>
+        
     );
 };
 

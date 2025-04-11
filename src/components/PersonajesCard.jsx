@@ -7,12 +7,12 @@ const PersonajesCard = () => {
     const { personajes, loading, error} = usePersonajeContext();
     const {agregarAFavoritos} = useFavoritosContext();
 
-    if (loading) return <div>Cargando...</div>;
-    if (error) return <div>{error}</div>;
-    if (!personajes || personajes.length === 0) return <div>No se encontraron personajes</div>;
+    if (loading) return <div className='text-gray-300'>Cargando...</div>;
+    if (error) return <div className='text-gray-300'>{error}</div>;
+    if (!personajes || personajes.length === 0) return <div className='flex container text-gray-300'>No se encontraron personajes</div>;
 
     return (
-        <div className="overflow-auto container mx-auto" style={{ height: '600px', maxHeight: '600px' }}> {/* Contenedor con scroll */}
+        <div className="overflow-auto container mx-auto bg-gray-800" style={{ height: '600px', maxHeight: '600px' }}> {/* Contenedor con scroll */}
             <div className="grid grid-cols-1 gap-4 mt-4 transition duration-1000">
                 {personajes.map((personaje) => (
                     <div className='relative p-4 ' key={personaje.id}>
