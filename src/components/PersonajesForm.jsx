@@ -28,7 +28,7 @@ const PersonajesForm = () => {
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)}
                         placeholder="Buscar personaje"
-                        className="px-2 py-2.5 border-none focus: outline-none bg-gray-600 text-gray-100 font-semibold w-full"
+                        className="px-2 py-2.5 border-none focus: outline-none bg-gray-600 text-gray-100 font-thin text-xl w-full"
                     />
                     <button
                         type="submit"
